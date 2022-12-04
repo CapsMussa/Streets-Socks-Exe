@@ -36,12 +36,12 @@
 .block:hover{
     box-shadow: 0px 0px 10px black;
 }
-
 .img{
     float:left;
-    width:200px;
+    margin-left: 5px;
+    width:190px;
     height:200px;
-    background: #555;
+    background:#888;
 }
 .sub{
     float: left;
@@ -74,16 +74,16 @@
     <a href="/" class="href">Главная</a>
 </div>
 
-<?php include 'bd/id/1.php'; ?>
+<?php
+$plugin = glob("admin/bd/*.php");
+foreach($plugin as $name)
+{
+    include $name;
+}
+
+?>
 
 
 
 </body>
 </html>
-
-<?php
-
-//массив
-// id товара
-// описание товара (размер)
-//цена
